@@ -2,13 +2,13 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:4500/api",
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 10000,
   withCredentials: true,
 });
 
 export const axiosInstanceWithAuth = axios.create({
-  baseURL: "http://localhost:4500/api",
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 10000,
   withCredentials: true,
 });
